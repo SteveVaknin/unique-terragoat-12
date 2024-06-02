@@ -20,6 +20,9 @@ EOF
   tags = {
     Name = "${local.resource_prefix.value}-ec2"
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
