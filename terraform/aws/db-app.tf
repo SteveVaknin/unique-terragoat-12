@@ -336,6 +336,9 @@ EOF
   tags = {
     Name = "${local.resource_prefix.value}-dbapp"
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 output "db_app_public_dns" {
