@@ -26,3 +26,7 @@ resource google_compute_instance "server" {
 resource google_compute_disk "unencrypted_disk" {
   name = "terragoat-${var.environment}-disk"
 }
+
+resource google_compute_disk "unencrypted_disk2" {
+  name = "terragoat-${var.environment}-disk"
+}
