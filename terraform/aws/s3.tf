@@ -12,6 +12,9 @@ resource "aws_s3_bucket" "data" {
   }
 }
 
+resource "aws_s3_bucket_object" "blanc" {
+}
+
 resource "aws_s3_bucket_object" "data_object" {
   bucket = aws_s3_bucket.data.id
   key    = "customer-master.xlsx"
@@ -48,6 +51,7 @@ resource "aws_s3_bucket" "operations" {
   tags = {
     Name        = "${local.resource_prefix.value}-operations"
     Environment = local.resource_prefix.value
+    tagtag = "tag"
   }
 
 }
